@@ -1,0 +1,169 @@
+.whyChoosing {
+  position: relative;
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -30px;
+  }
+
+  &__item {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+    transition: 0.3s linear;
+    padding: 30px;
+    border-radius: 16px;
+
+    &_wrap {
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &.blue {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $c_blue_light;
+        }
+      }
+    }
+    &.red {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $c_red_light;
+        }
+      }
+    }
+    &.green {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $c_green_light;
+        }
+      }
+    }
+    &.orange {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $c_orange_light;
+        }
+      }
+    }
+    &.yellow {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $c_yellow_light;
+        }
+      }
+    }
+    &.bluegreen {
+      @media (any-hover: hover) {
+        &:hover {
+          background-color: $c_blueGreen_light;
+        }
+      }
+    }
+
+    .iconBlock {
+      margin-right: 2.5rem;
+    }
+
+    .title {
+      margin-bottom: 0.25em;
+      display: block;
+    }
+
+    p {
+      color: $c_text_grey;
+      font-weight: 500;
+    }
+
+    &_mContent {
+      display: none;
+    }
+
+    &_arrow {
+      display: none;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .whyChoosing {
+    &__item {
+      background-color: $c_blue_light;
+      padding: 16px;
+
+      &_mContent {
+        display: block;
+        padding-top: 16px;
+      }
+
+      &_wrap {
+        align-items: center;
+      }
+
+      &_content {
+        .title {
+          margin-bottom: 0;
+          line-height: 1;
+        }
+        p {
+          display: none;
+        }
+      }
+
+      .iconBlock {
+        margin-right: 16px;
+      }
+
+      &.red {
+        background-color: $c_red_light;
+      }
+
+      &.green {
+        background-color: $c_green_light;
+      }
+
+      &.orange {
+        background-color: $c_orange_light;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .whyChoosing {
+    &__item {
+      flex-basis: calc(100%);
+      margin-bottom: 16px;
+      padding: 0;
+
+      &_wrap {
+        padding: 16px;
+      }
+
+      &_mContent {
+        display: none;
+        padding: 0 16px 16px 16px;
+      }
+
+      &_content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+      }
+
+      &_arrow {
+        display: block;
+      }
+
+      &.active {
+        .whyChoosing__item_arrow {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}

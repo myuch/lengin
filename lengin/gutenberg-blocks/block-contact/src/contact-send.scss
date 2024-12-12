@@ -1,0 +1,68 @@
+.contactSend {
+  display: none;
+  &__wrapper {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .title {
+    display: block;
+    font-weight: 500;
+    line-height: 1.1;
+    color: #ffffff;
+    margin-bottom: 3rem;
+  }
+
+  &__post {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $c_bg_third;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+  }
+
+  &__image {
+    width: auto;
+    height: auto;
+
+    &-mobile {
+      display: none;
+    }
+  }
+
+  &__desc {
+    p {
+      color: #ffffff;
+
+      a {
+        font-weight: 700;
+        text-decoration: underline;
+        transition: 0.3s all;
+
+        &:hover {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 767px) {
+  .contactSend {
+    .title {
+      margin-bottom: 10px;
+    }
+    &__image {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.page-id-87,
+.archive  {
+  .main {
+    overflow: visible;
+  }
+}
+
+
+
+.cBlog {
+  position: relative;
+  overflow: visible;
+
+  .catalogPreviewMob{
+    display: none;
+  }
+
+  // .stickyElements {
+  //   margin-bottom: 5rem;
+  // }
+
+  .pagination{
+    width: calc(100% - 17rem);
+    margin: 3.75rem 0 0 auto;
+  }
+
+  .wrap {
+    display: flex;
+  }
+
+  &_mob {
+    position: relative;
+    margin-bottom: 24px;
+    display: none;
+
+    .title {
+      margin-bottom: 5px;
+      display: block;
+      font-weight: 500;
+    }
+
+    p {
+      font-weight: 500;
+      color: $c_text_secondary;
+      margin-bottom: 24px;
+    }
+  }
+
+  .sidebar.right {
+    display: none;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .cBlog {
+    .sidebar {
+      display: none;
+    }
+
+    .catalogPreviewMob{
+      display: block;
+    }
+
+    .pagination{
+      width: 100%;
+    }
+
+    &_mob {
+      display: block;
+    }
+  }
+}

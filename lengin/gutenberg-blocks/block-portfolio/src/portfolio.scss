@@ -1,0 +1,265 @@
+.cPortfolio {
+  overflow: visible;
+  position: relative;
+
+  .wrap {
+    display: flex;
+  }
+
+  &__content {
+    width: 100%;
+  }
+
+  // &__list {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   margin-right: -32px;
+  // }
+
+  .sidebar {
+    display: none;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  .tag {
+    line-height: 1.9;
+    margin-bottom: 8px;
+    color: #060a21;
+    font-weight: 500;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+
+    &.hide {
+      display: none;
+    }
+
+    img {
+      min-width: 24px;
+      max-width: 24px;
+      margin-left: 8px;
+      display: block;
+    }
+
+    &.active {
+      color: $c_orange;
+    }
+
+    &:hover {
+      color: $c_orange;
+    }
+  }
+}
+
+.projectCard {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 80px;
+
+  .title {
+    font-weight: 600;
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  &-logo {
+    height: auto;
+    max-height: 50px;
+    margin-bottom: 32px;
+    max-width: 240px;
+    width: auto;
+    display: block;
+  }
+
+  &__img {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+    border-radius: 16px;
+    transform: translateZ(0);
+    border: 2px solid #d9cfc3;
+    // box-shadow: 0px 10px 30px 0px #B3824726;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+      .projectCard-flag {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &-flag {
+    display: block;
+    height: auto !important;
+    width: 40px !important;
+    position: absolute !important;
+    left: 15px !important;
+    top: 15px !important;
+    z-index: 10;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    padding-right: 100px;
+  }
+
+  .cardTags {
+    padding: 0 16px 16px 16px;
+
+    &-item {
+      font-size: 15px;
+    }
+  }
+
+  &__desc {
+    position: relative;
+    margin-bottom: 24px;
+
+    p {
+      font-weight: 500;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  &:nth-child(even) {
+    .projectCard__content {
+      order: 2;
+      padding-right: 0px;
+      padding-left: 100px;
+    }
+  }
+}
+
+.cPortfolio {
+  .select2-results__option--highlighted {
+    order: -1;
+    display: none !important;
+  }
+}
+
+.catalogPreviewMob {
+  position: relative;
+  margin-bottom: 24px;
+  margin-bottom: 80px;
+
+  .title {
+    margin-bottom: 5px;
+    display: block;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  p {
+    font-weight: 500;
+    color: $c_text_secondary;
+    margin-bottom: 24px;
+    text-align: center;
+    font-size: $s_20;
+  }
+
+  .select2 {
+    margin-bottom: 0 !important;
+  }
+
+  &__select {
+    min-height: 44px;
+    width: 100%;
+    opacity: 0;
+    display: none;
+  }
+}
+
+.readMore {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  transition: 0.3s linear;
+
+  svg {
+    display: block;
+    margin-left: 10px;
+  }
+
+  &:hover {
+    opacity: 0.75;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .cPortfolio {
+    .sidebar {
+      display: none;
+    }
+  }
+  // .catalogPreviewMob {
+  //   display: block;
+
+  //   &__select {
+  //     display: block;
+  //   }
+  // }
+}
+
+@media (max-width: 991px) {
+  .cPortfolio {
+    padding-top: 120px;
+  }
+
+  .projectCard {
+    flex-direction: column;
+
+    .title {
+      text-align: center;
+    }
+
+    &__content {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 32px;
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+      order: 2 !important;
+    }
+
+    &__desc {
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .projectCard {
+    flex-basis: calc(100%);
+  }
+}

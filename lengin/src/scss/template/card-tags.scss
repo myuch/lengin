@@ -1,0 +1,80 @@
+.cardTags {
+  display: flex;
+  flex-wrap: wrap;
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: fit-content;
+    border-radius: 40px;
+    margin-right: 8px;
+    margin-bottom: 4px;
+    padding: 0 16px;
+    line-height: 1;
+    font-weight: 500;
+    transition: 0.3s;
+    &.blue {
+      border: 1px solid $c_blue;
+      color: $c_blue;
+    }
+    &.red {
+      border: 1px solid $c_red;
+      color: $c_red;
+    }
+    &.green {
+      border: 1px solid $c_green;
+      color: $c_green;
+    }
+    &.orange {
+      border: 1px solid $c_orange;
+      color: $c_orange;
+    }
+    &.yellow {
+      border: 1px solid $c_yellow;
+      color: $c_yellow;
+    }
+    &.bluegreen {
+      border: 1px solid $c_blueGreen;
+      color: $c_blueGreen;
+    }
+  }
+
+  &.links {
+    .cardTags-item {
+      &:hover {
+        color: #060A21;
+      }
+      // &.blue {
+      //   &:hover {
+      //     background: $c_blue;
+      //   }
+      // }
+      // &.red {
+      //   &:hover {
+      //     background: $c_red;
+      //   }
+      // }
+      // &.green {
+      //   &:hover {
+      //     background: $c_green;
+      //   }
+      // }
+      // &.orange {
+      //   &:hover {
+      //     background: $c_orange;
+      //   }
+      // }
+      // &.yellow {
+      //   &:hover {
+      //     background: $c_yellow;
+      //   }
+      // }
+      // &.bluegreen {
+      //   &:hover {
+      //     background: $c_blueGreen;
+      //   }
+      // }
+    }
+  }
+}

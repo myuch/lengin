@@ -1,0 +1,166 @@
+.tCard {
+  position: relative;
+  background: #e9e9f2;
+  padding: 2rem;
+  border-radius: 16px;
+
+  &__platform {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 10;
+
+    a {
+      cursor: pointer;
+      text-decoration: underline;
+      &:hover {
+        span {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &_item {
+      display: flex;
+      align-items: center;
+
+      span {
+        font-size: $s_12;
+        color: #747683;
+        font-weight: 600;
+        margin-right: 6px;
+      }
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.5rem;
+  }
+
+  &-logo {
+    display: block;
+    width: auto;
+  }
+
+  &-line {
+    width: $s_4;
+    height: $s_60;
+    background: $c_blue;
+    margin-right: 1.5rem;
+    border-radius: 40px;
+  }
+
+  &__desc {
+    margin-bottom: 2.5rem;
+    p {
+      line-height: 1.5em;
+    }
+  }
+
+  &__bootom {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__photo {
+    border: 2px solid $c_blue;
+    border-radius: 100%;
+    min-width: 4rem;
+    max-width: 4rem;
+    height: 4rem;
+    padding: 3px;
+
+    &_block {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 100%;
+      overflow: hidden;
+      img {
+        @include image-in-block;
+      }
+    }
+  }
+
+  &__data {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+  }
+
+  &-name {
+    font-size: $s_18;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: block;
+  }
+
+  &-position {
+    font-weight: 500;
+  }
+
+  &.blue {
+    .tCard-line {
+      background: $c_blue;
+    }
+    .tCard__photo {
+      border: 2px solid $c_blue;
+    }
+  }
+  &.red {
+    .tCard-line {
+      background: $c_red;
+    }
+    .tCard__photo {
+      border: 2px solid $c_red;
+    }
+  }
+  &.yellow {
+    .tCard-line {
+      background: $c_yellow;
+    }
+    .tCard__photo {
+      border: 2px solid $c_yellow;
+    }
+  }
+  &.green {
+    .tCard-line {
+      background: $c_green;
+    }
+    .tCard__photo {
+      border: 2px solid $c_green;
+    }
+  }
+  &.orange {
+    .tCard-line {
+      background: $c_orange;
+    }
+    .tCard__photo {
+      border: 2px solid $c_orange;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 767px) {
+  .tCard {
+    padding: 40px 16px 16px;
+
+    &__platform {
+      right: 10px;
+      top: 10px;
+    }
+  }
+}

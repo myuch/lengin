@@ -1,0 +1,20 @@
+.blColor {
+  &.blue {
+    background: $c_blue_light;
+  }
+  &.red {
+    background: $c_red_light;
+  }
+  &.green {
+    background: $c_green_light;
+  }
+  &.orange {
+    background: $c_orange_light;
+  }
+  &.yellow {
+    background: $c_yellow_light;
+  }
+  &.bluegreen {
+    background: $c_blueGreen_light;
+  }
+}

@@ -1,0 +1,66 @@
+// Placeholder
+@mixin placeholder-style() {
+  &::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #e9e9f2;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+  }
+}
+
+@mixin placeholder-style-small() {
+  &::-webkit-scrollbar {
+    width: 8px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #e9e9f2;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+  }
+}
+
+// Image in Block
+@mixin image-in-block {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+// Cover Background
+@mixin cover-background {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}

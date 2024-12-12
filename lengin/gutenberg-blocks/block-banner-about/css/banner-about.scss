@@ -1,0 +1,72 @@
+.aboutBanner {
+  padding: 0;
+  padding-top: 132px;
+
+  .title{
+    br{
+      display: none;
+    }
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title {
+    font-size: 36px !important;
+    text-align: center;
+    display: block;
+  }
+
+  &-ill {
+    width: 100%;
+    max-width: 1180px;
+    height: auto;
+
+    &.mobile {
+      display: none;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1619px) {
+  .aboutBanner {
+    &-ill {
+      max-width: 1020px;
+    }
+  }
+}
+
+@media (max-width: 1199px) {
+  .aboutBanner {
+    .container {
+      padding: 0 !important;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutBanner {
+    padding-top: 100px;
+
+    .title{
+      margin-bottom: 48px;
+      br{
+        display: block;
+      }
+    }
+
+    &-ill {
+      &.desktop {
+        display: none;
+      }
+
+      &.mobile {
+        display: block;
+      }
+    }
+  }
+}

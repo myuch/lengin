@@ -1,0 +1,162 @@
+.mt48 {
+  margin-top: 3em;
+}
+
+.mt80 {
+  margin-top: 5rem;
+}
+
+.ptfb{
+  padding-top: 10rem;
+}
+
+.bgi {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+section {
+  &.lightTheme {
+    background-color: #fff;
+
+    .topContent {
+      .title {
+        color: $c_text_primary;
+      }
+    }
+  }
+
+  &.darkTheme {
+    background-color: $c_bg_primary;
+
+    .topContent {
+      .title {
+        color: #fff;
+      }
+    }
+  }
+
+  &.spt140 {
+    padding-top: 140px;
+  }
+  &.spt120 {
+    padding-top: 120px;
+  }
+  &.spt100 {
+    padding-top: 100px;
+  }
+  &.spt80 {
+    padding-top: 80px;
+  }
+  &.spt60 {
+    padding-top: 60px;
+  }
+  &.spt40 {
+    padding-top: 40px;
+  }
+  &.spt20 {
+    padding-top: 20px;
+  }
+  &.spt0 {
+    padding-top: 0px;
+  }
+
+  &.spb140 {
+    padding-bottom: 140px;
+  }
+  &.spb120 {
+    padding-bottom: 120px;
+  }
+  &.spb100 {
+    padding-bottom: 100px;
+  }
+  &.spb80 {
+    padding-bottom: 80px;
+  }
+  &.spb60 {
+    padding-bottom: 60px;
+  }
+  &.spb40 {
+    padding-bottom: 40px;
+  }
+  &.spb20 {
+    padding-bottom: 20px;
+  }
+  &.spb0 {
+    padding-bottom: 0px;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+
+  .ptfb{
+    padding-top: 120px;
+  }
+
+}
+
+@media (max-width: 767px) {
+  .mt48 {
+    margin-top: 40px;
+  }
+
+  .mt80 {
+    margin-top: 64px;
+  }
+
+  section {
+
+    &.spt140 {
+      padding-top: 112px;
+    }
+    &.spt120 {
+      padding-top: 96px;
+    }
+    &.spt100 {
+      padding-top: 80px;
+    }
+    &.spt80 {
+      padding-top: 64px;
+    }
+    &.spt60 {
+      padding-top: 48px;
+    }
+    &.spt40 {
+      padding-top: 32px;
+    }
+    &.spt20 {
+      padding-top: 16px;
+    }
+    &.spt0 {
+      padding-top: 0px;
+    }
+  
+    &.spb140 {
+      padding-bottom: 112px;
+    }
+    &.spb120 {
+      padding-bottom: 96px;
+    }
+    &.spb100 {
+      padding-bottom: 80px;
+    }
+    &.spb80 {
+      padding-bottom: 64px;
+    }
+    &.spb60 {
+      padding-bottom: 48px;
+    }
+    &.spb40 {
+      padding-bottom: 32px;
+    }
+    &.spb20 {
+      padding-bottom: 16px;
+    }
+    &.spb0 {
+      padding-bottom: 0px;
+    }
+  }
+  
+}

@@ -1,0 +1,170 @@
+.single {
+  .main {
+    overflow: visible;
+  }
+
+  .authorBlock__desc {
+    display: none;
+  }
+}
+
+.article {
+  position: relative;
+  padding: 160px 0 100px;
+  overflow: visible;
+
+  &__center {
+    width: 100%;
+
+    .shareButtons {
+      display: none;
+    }
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__preview {
+    margin-bottom: 24px;
+
+    .tableContents {
+      display: none;
+    }
+
+    &_top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+    &_bottom {
+      padding-left: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    .article-authorName,
+    .article-date {
+      color: #747683;
+      line-height: 1;
+
+      a {
+        color: #747683;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &-line {
+      width: 2px;
+      height: 16px;
+      background-color: #747683;
+      display: block;
+      margin: 0 8px;
+    }
+
+    .tableContents {
+      margin-top: 30px;
+    }
+  }
+
+  h1.title {
+    display: block;
+    padding-left: 20px;
+    margin-bottom: 12px;
+    position: relative;
+    font-weight: 700;
+    font-size: 2.75rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: block;
+      left: 0;
+      top: 0;
+      min-width: 4px;
+      max-width: 4px;
+      height: 100%;
+      background-color: #e84623;
+      border-radius: 40px;
+    }
+  }
+
+  .cardTags {
+    &-item {
+      padding: 0;
+      border: none;
+      height: auto;
+      margin-bottom: 0;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .article {
+    padding-top: 120px;
+
+    &__center {
+      .shareButtons {
+        display: block;
+        margin-bottom: 50px;
+      }
+    }
+
+    &__preview {
+      .tableContents {
+        display: block;
+        margin-bottom: 30px;
+      }
+    }
+
+    .wrap {
+      flex-direction: column;
+    }
+
+    .sidebar.left,
+    .sidebar.right {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .article {
+    .cardTags-item {
+      font-size: 12px;
+    }
+
+    .postTime {
+      font-size: 12px;
+
+      svg {
+        width: 16px;
+        height: auto;
+      }
+    }
+
+    h1.title {
+      font-size: 26px;
+      line-height: 1.3;
+    }
+
+    .authorBlock {
+      &__wrap {
+        align-items: center;
+        text-align: center;
+      }
+
+      &-link {
+        margin: 0 auto;
+      }
+    }
+  }
+}

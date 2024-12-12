@@ -1,0 +1,44 @@
+.testimonialsAll {
+  position: relative;
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -16px;
+    padding: 0 16px;
+  }
+
+  .tCard {
+    flex-basis: calc(100% / 3 - 16px);
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .testimonialsAll {
+    position: relative;
+
+    .tCard {
+      flex-basis: calc(100% / 2 - 16px);
+    }
+  }
+}
+
+@media (max-width: 991px) {
+}
+
+@media (max-width: 767px) {
+  .testimonialsAll {
+    position: relative;
+
+    .wrap {
+      padding: 0 20px;
+    }
+
+    .tCard {
+      flex-basis: calc(100%);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+#editor #sStoriesSwiper {
+  opacity: 1;
+}
+
+#editor #tHomeSwiper {
+  opacity: 1;
+}
+
+#editor .acf-field textarea {
+  padding: 10px !important;
+}
+
+#editor .wp-block-post-title{
+  display: block;
+}
+
+
+#editor h2,
+#editor h3,
+#editor h4 {
+  display: block;
+  margin-bottom: 20px;
+}
+
+#editor p{
+  margin-bottom: 20px;
+}

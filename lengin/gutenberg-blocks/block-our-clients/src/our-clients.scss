@@ -1,0 +1,161 @@
+.ourClientsList {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 60px;
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    &_list {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+    }
+
+    a {
+      cursor: pointer;
+      display: block;
+      &:hover {
+        img {
+          filter: grayscale(0%);
+        }
+      }
+    }
+  }
+
+  &__item {
+    padding: 0 50px;
+    img {
+      filter: grayscale(100%);
+      transition: 0.3s linear;
+      transform: scale(1.1);
+    }
+  }
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+}
+
+.ourClients {
+  &__mobile {
+    display: none;
+  }
+}
+
+#clTopFirst {
+  animation: animateLeft 300s -300s linear infinite;
+}
+
+#clTopSecond {
+  animation: animateLeftSecond 300s -150s linear infinite;
+}
+
+#clBottomFirst {
+  animation: animateRight 300s -300s linear infinite;
+}
+
+#clBottomSecond {
+  animation: animateRightSecond 300s -150s linear infinite;
+}
+
+@keyframes animateLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animateLeftSecond {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes animateRight {
+  100% {
+    transform: translateX(100%);
+  }
+  0% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes animateRightSecond {
+  100% {
+    transform: translateX(0);
+  }
+  0% {
+    transform: translateX(-200%);
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (min-width: 1025px) {
+  // .ourClientsList {
+  //   &__wrap {
+  //     will-change: transform;
+  //     animation-play-state: running;
+  //   }
+  // }
+
+  // #ourClientsList-first,
+  // #ourClientsList-second {
+  //   &:hover {
+  //     .ourClientsList__wrap {
+  //       animation-play-state: paused;
+  //     }
+  //   }
+  // }
+}
+
+@media (max-width: 1199px) {
+  .ourClients {
+    &__item {
+      flex-basis: calc(100% / 5 - 8px);
+      margin-right: 8px;
+      padding: 5px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      border: 1px solid #c7c9d6;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: flex;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .ourClientsList__item img {
+    width: 200px;
+  }
+
+  .ourClientsList__item img{
+    transform: scale(1);
+  }
+
+  .ourClientsList {
+    margin-bottom: 40px;
+    &__item {
+      padding: 0 5px;
+    }
+  }
+
+}

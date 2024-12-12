@@ -1,0 +1,185 @@
+.benefits {
+  position: relative;
+  background: $c_bg_primary;
+
+  .wrap {
+    display: flex;
+    align-items: center;
+  }
+
+  &__left {
+    width: 100%;
+    overflow: hidden;
+    margin-right: 44px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__right {
+    width: 100%;
+    min-width: 45.25rem;
+    max-width: 45.25rem;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -24px;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 64rem;
+    height: auto;
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    margin: 5rem auto 0;
+
+    p {
+      width: 100%;
+      font-weight: 500;
+      font-size: $s_28;
+      margin-right: 40px;
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+.odCard {
+  position: relative;
+  flex-basis: calc(100% / 2 - 24px);
+  padding: 1rem 1rem 1rem 3rem;
+  border: 1px solid #28241F;
+  border-radius: 16px;
+  margin-right: 24px;
+  margin-bottom: 1.5rem;
+  transition: 0.3s;
+
+  &:last-child,
+  &:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .title {
+    display: block;
+    font-weight: 500;
+    line-height: 1.25;
+    // color: #fff;
+    margin-bottom: 4px;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: -2rem;
+      top: 6px;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 100%;
+    }
+  }
+
+  p {
+    font-weight: 500;
+    // color: $c_text_light;
+    letter-spacing: -0.3px;
+  }
+
+  &.bluegreen {
+    .title:after {
+      background: $c_blueGreen;
+    }
+  }
+  &.yellow {
+    .title:after {
+      background: $c_yellow;
+    }
+  }
+  &.orange {
+    .title:after {
+      background: $c_orange;
+    }
+  }
+  &.red {
+    .title:after {
+      background: $c_red;
+    }
+  }
+  &.blue {
+    .title:after {
+      background: $c_blue;
+    }
+  }
+  &.green {
+    .title:after {
+      background: $c_green;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .benefits {
+    .wrap {
+      flex-direction: column;
+    }
+
+    &__left {
+      display: none;
+    }
+
+    &__right {
+      min-width: auto;
+      max-width: none;
+    }
+
+    &__bottom {
+      margin-top: 60px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .benefits {
+
+    &__left{
+      display: block;
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+    &__bottom {
+      flex-direction: column;
+      align-items: center;
+      padding: 24px;
+
+      p {
+        margin-bottom: 30px;
+        margin-right: 0;
+        font-size: 20px;
+        line-height: 1.4;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  }
+
+  .odCard {
+    flex-basis: calc(100%);
+
+    &:nth-last-child(2) {
+      margin-bottom: 24px;
+    }
+  }
+}

@@ -1,0 +1,182 @@
+.bannerInfo {
+  position: relative;
+
+  .block {
+    background-color: $c_bg_secondary;
+    border-radius: 16px;
+    padding: 40px 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+  // &__content {
+  //   width: 100%;
+  //   max-width: 800px;
+  // }
+
+  .title {
+    display: block;
+    margin-bottom: 32px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+
+    .bi-title-ill-1 {
+      position: relative;
+      z-index: 2;
+
+      img {
+        position: absolute;
+        left: -6px;
+        top: 12px;
+        z-index: -1;
+        width: 106%;
+      }
+    }
+
+    .bi-title-ill-2 {
+      position: relative;
+
+      img {
+        position: absolute;
+        left: 1px;
+        top: 0px;
+        z-index: -1;
+        width: 108%;
+      }
+    }
+
+    .bi-title-ill-3 {
+      position: relative;
+
+      img {
+        position: absolute;
+        left: -7px;
+        top: 6px;
+        z-index: -1;
+        width: 105%;
+      }
+    }
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 72px auto;
+    p {
+      width: 100%;
+      font-size: 22px;
+      text-align: center;
+      position: relative;
+      margin-bottom: 0;
+
+      .bi-arrow {
+        position: relative;
+      }
+
+      .bi-arrow-ill {
+        position: absolute;
+        left: -2px;
+        bottom: -13px;
+        width: 115%;
+      }
+    }
+  }
+
+  &-iconLeft {
+    position: absolute;
+    bottom: 8px;
+    left: 90px;
+  }
+
+  &-iconRight {
+    position: absolute;
+    bottom: 8px;
+    right: 90px;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .bannerInfo {
+    &__desc {
+      p {
+        font-size: 18px;
+
+        br {
+          display: none;
+        }
+      }
+    }
+
+    &-iconLeft {
+      left: 25px;
+      max-height: 100px;
+    }
+    &-iconRight {
+      right: 25px;
+      max-height: 100px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .bannerInfo {
+    .block {
+      padding: 24px;
+      align-items: flex-start;
+    }
+
+    .btnDark {
+      width: 100%;
+    }
+
+    .title {
+      text-align: left;
+      margin-bottom: 8px;
+
+      .bi-title-ill-1 img {
+        width: 116%;
+        left: -6px;
+        top: 6px;
+      }
+
+      .bi-title-ill-2 img {
+        left: -8px;
+        top: -3px;
+      }
+
+      br{
+        display: none;
+      }
+    }
+
+    &__desc {
+      margin-bottom: 24px;
+
+      p {
+        font-size: 16px;
+        text-align: left;
+
+        br {
+          display: none;
+        }
+
+        .bi-arrow-ill {
+          width: 102%;
+          bottom: -8px;
+        }
+      }
+    }
+
+    &-iconLeft {
+      display: none;
+    }
+
+    &-iconRight {
+      display: none;
+    }
+  }
+}

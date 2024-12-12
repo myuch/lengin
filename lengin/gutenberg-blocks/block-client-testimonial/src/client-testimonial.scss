@@ -1,0 +1,271 @@
+.clientTestimonial {
+  position: relative;
+
+  .wrap {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .twoButtons {
+    margin-top: 80px;
+  }
+}
+
+.clientReview {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  &.full {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  &-icon {
+    path {
+      fill: $c_orange;
+    }
+  }
+
+  &-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    position: relative;
+    overflow: hidden;
+
+    img {
+      @include image-in-block;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+  }
+
+  &-name,
+  &-position {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+  }
+
+  &-position{
+    margin-right: 10px;
+  }
+
+  &__content {
+    margin-left: 16px;
+    display: flex;
+    align-items: center;
+
+    &_wrap {
+      display: flex;
+      align-items: center;
+    }
+
+    span {
+      font-size: 28px;
+      line-height: 1;
+      display: block;
+      margin: 0 5px;
+    }
+  }
+
+  &-linkedin {
+    transition: 0.3s linear;
+    cursor: pointer;
+
+    img {
+      width: 28px;
+      height: auto;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  &__desc {
+    margin-bottom: 24px;
+    margin-top: 16px;
+    p {
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.25;
+    }
+  }
+}
+
+.clientVideo {
+  width: 100%;
+  min-width: 526px;
+  max-width: 526px;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  margin-right: 64px;
+  height: auto;
+  aspect-ratio: 16/10.5;
+
+  &-play {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 5rem;
+    height: auto;
+  }
+
+  &-thumbnail {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: translateZ(0);
+    border-radius: 16px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0.7) 100%
+      );
+    }
+
+    img {
+      @include image-in-block;
+      transition: 0.3s;
+    }
+  }
+
+  &:hover {
+    .clientVideo-thumbnail {
+      img {
+        transform: scale(1.05);
+      }
+    }
+  }
+}
+
+.single-projects {
+  .ssModal {
+    .ssModal__card {
+      display: block;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+
+@media (max-width: 1199px) {
+  .clientVideo {
+    min-width: 400px;
+    max-width: 400px;
+    margin-right: 34px;
+  }
+
+  .clientReview {
+    margin-right: 16px;
+
+    &__content{
+      span{
+        font-size: 12px;
+      }
+    }
+
+    &-name,
+    &-position {
+      font-size: 12px;
+    }
+
+    &-photo {
+      width: 32px;
+      height: 32px;
+    }
+
+    &__desc {
+      margin-top: 16px;
+
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .clientTestimonial {
+    .wrap {
+      flex-direction: column;
+      max-width: 440px;
+      margin: 0 auto;
+    }
+  }
+
+  .clientVideo{
+    margin-right: 0;
+    max-width: none;
+    width: 100%;
+    min-width: auto;
+  }
+
+  .clientReview {
+    margin-right: 0;
+    margin-top: 24px;
+    &-quote-icon{
+      width: 38px;
+      height: 38px;
+    }
+
+    &__desc{
+      margin-top: 8px;
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+  .clientTestimonial {
+    .wrap {
+      flex-direction: column;
+    }
+
+    .twoButtons{
+      margin-top: 20px;
+    }
+  }
+
+  .clientReview {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+
+    &-linkedin img{
+      width: 22px;
+    }
+  }
+
+  .clientVideo {
+    width: 100%;
+
+    &-play {
+      width: 50px;
+    }
+  }
+}

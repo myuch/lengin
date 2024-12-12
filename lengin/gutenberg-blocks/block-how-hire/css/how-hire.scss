@@ -1,0 +1,167 @@
+.howHire {
+  position: relative;
+
+  .btnPrimary{
+    margin: 60px auto 0;
+  }
+
+  .wrapper {
+    position: relative;
+    padding-left: 50px;
+  }
+
+  &-first-illustration {
+    position: absolute;
+    left: -50px;
+    top: 0;
+  }
+
+  &-second-illustration {
+    position: absolute;
+    right: -50px;
+    bottom: 60px;
+  }
+
+  .wrap {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 320px;
+    max-width: 320px;
+    padding-right: 15px;
+
+    &:nth-child(1) {
+      padding-top: 357px;
+      margin-left: 0;
+    }
+
+    &:nth-child(2) {
+      padding-top: 218px;
+    }
+
+    &:nth-child(3) {
+      padding-top: 80px;
+    }
+
+    &:nth-child(4) {
+      min-width: 256px;
+      max-width: 256px;
+    }
+
+    &-number {
+      position: relative;
+      margin-bottom: 20px;
+      span {
+        font-size: 64px;
+        line-height: 1;
+        font-weight: 500;
+        position: relative;
+        z-index: 2;
+      }
+      img {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &-title {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .howHire {
+    .wrapper {
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &-first-illustration {
+      position: relative;
+      left: 0;
+      top: 0;
+      margin-bottom: 48px;
+    }
+
+    &-second-illustration {
+      position: relative;
+      right: 0;
+      bottom: 0;
+    }
+
+    .wrap {
+      flex-wrap: wrap;
+      margin-right: -50px;
+      padding-left: 30px;
+    }
+
+    &__item {
+      flex-basis: calc(100% / 2 - 50px);
+      margin-right: 50px;
+      padding-top: 0 !important;
+      margin-left: 0 !important;
+      min-width: auto !important;
+      max-width: none !important;
+      margin-bottom: 48px;
+
+      &-number {
+        span {
+          font-size: 56px;
+        }
+      }
+
+      &-title {
+        font-size: 20px;
+        br {
+          display: none;
+        }
+      }
+
+      p {
+        font-size: 16px;
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 767px) {
+  .howHire {
+    .wrap{
+      padding: 0 16px;
+      margin-right: 0;
+    }
+    &__item {
+      flex-basis: calc(100%);
+      margin-right: 0;
+      padding-right: 0;
+
+      &-number {
+        left: 24px;
+        img{
+          width: 115px;
+        }
+      }
+    }
+  }
+}

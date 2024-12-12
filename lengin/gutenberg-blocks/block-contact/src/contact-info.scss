@@ -1,0 +1,85 @@
+.contactInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  &__wrap {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-family: "MacPawFixelDisplay";
+    font-weight: 500;
+    font-size: $s_28;
+    line-height: 1.25;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    display: block;
+  }
+
+  &__block-lists {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 2.5rem;
+
+    .title {
+      margin-bottom: 24px;
+      line-height: 1;
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    padding: 2rem;
+    background-color: $c_bg_secondary;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .socials {
+      display: flex;
+
+      &__item {
+        margin-right: 16px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+
+    .title {
+      margin-right: 10px;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .contactInfo {
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 767px) {
+  .contactInfo {
+    &__bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+
+      .title {
+        margin-right: 0;
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

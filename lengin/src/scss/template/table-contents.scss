@@ -1,0 +1,48 @@
+.tableContents {
+  margin-bottom: 40px;
+  #ez-toc-container {
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .ez-toc-title-toggle {
+    display: none;
+  }
+
+  .ez-toc-title {
+    text-transform: uppercase;
+    color: #747683;
+    font-weight: 600 !important;
+    margin-bottom: 10px !important;
+    display: block !important;
+  }
+
+  nav {
+    li {
+      margin-bottom: 16px !important;
+      // display: block;
+
+      &:last-child {
+        margin-bottom: 0 !important;
+      }
+      a {
+        font-size: 16px;
+        font-weight: 500;
+        color: #747683 !important;
+        line-height: 1.3;
+        display: -webkit-box !important;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &.active {
+          color: #060a21 !important;
+          text-decoration: underline !important;
+        }
+      }
+    }
+  }
+}

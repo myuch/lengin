@@ -1,0 +1,272 @@
+.teamM {
+  position: relative;
+
+  &__top {
+    position: relative;
+    width: fit-content;
+    margin-bottom: 80px;
+
+    .title {
+      br {
+        display: none;
+      }
+    }
+  }
+
+  &-illustration {
+    position: absolute;
+    right: -210px;
+    top: -12px;
+  }
+
+  &-illustration-mobile {
+    display: none;
+  }
+
+  &__content {
+    width: 100%;
+    min-width: 400px;
+    max-width: 400px;
+    overflow: hidden;
+    margin-right: 56px;
+
+    .swiper-slide {
+      .teamM-employee {
+        opacity: 0;
+      }
+      &.swiper-slide-active {
+        .teamM-employee {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  &__photos {
+    overflow: hidden;
+    width: 100%;
+    min-width: 1200px;
+    max-width: 1200px;
+
+    .swiper-slide {
+      &.swiper-slide-active {
+        .teamMCard {
+          img {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .wrapper {
+    position: relative;
+  }
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  #teamM-pagination {
+    width: fit-content;
+    margin-top: 0;
+    margin: 0 32px;
+    bottom: 0;
+
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+      transition: 0.3s;
+
+      &.swiper-pagination-bullet-active {
+        width: 32px;
+        border-radius: 40px;
+      }
+    }
+  }
+
+  &__swiper_buttons {
+    display: flex;
+    align-items: center;
+    margin-left: 456px;
+    padding-left: 32px;
+    margin-top: 32px;
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      height: auto;
+    }
+  }
+}
+
+.teamM-employee {
+  width: 100%;
+  &-title {
+    font-weight: 500;
+    margin-bottom: 16px;
+    display: block;
+  }
+  &-desc {
+    p {
+      color: #514f4c;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.6;
+    }
+  }
+}
+
+.teamMCard {
+  background-color: #f4efe9;
+  padding: 16px;
+  border-radius: 16px;
+
+  &-name {
+    display: block;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 1.1;
+  }
+
+  &-position {
+    display: block;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.1;
+  }
+
+  &__photo {
+    height: auto;
+    padding-bottom: 100%;
+    position: relative;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    overflow: hidden;
+    img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+      opacity: 0.3;
+      transition: opacity 0.3s linear;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 40px;
+  }
+
+  &-linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-color: #ff9142;
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 991px) {
+  .teamM {
+    &__top {
+      margin: 0 auto 56px;
+
+      .title {
+        br {
+          display: block;
+        }
+      }
+    }
+
+    &-illustration {
+      display: none;
+    }
+
+    &-illustration-mobile {
+      display: block;
+      position: absolute;
+      right: -150px;
+      top: 10px;
+    }
+
+    .wrap {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__content {
+      min-width: auto;
+      max-width: 100%;
+      margin-right: 0;
+    }
+
+    &__photos {
+      order: -1;
+      min-width: auto;
+      max-width: 380px;
+      margin-bottom: 24px;
+    }
+
+    .swiper__buttons {
+      display: none;
+    }
+
+    #team-pagination {
+      display: block;
+      margin: 30px 0 20px !important;
+    }
+
+    .teamM__photos .swiper-slide:last-child {
+      display: none !important;
+    }
+
+    .teamM__photos .swiper-slide:nth-last-child(2) {
+      display: none !important;
+    }
+  }
+
+  .teamM-employee {
+    max-width: 380px;
+    margin: 0 auto;
+    &-desc {
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .teamM__swiper_buttons {
+    margin-left: 0;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .teamM {
+
+    &__top {
+      margin: auto auto 56px 0;
+    }
+
+  }
+
+}

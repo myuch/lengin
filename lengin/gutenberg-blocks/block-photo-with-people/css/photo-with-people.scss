@@ -1,0 +1,27 @@
+.photoPeople {
+  position: relative;
+
+  &-desktop {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &-mobile {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 767px) {
+  .photoPeople {
+    &-desktop {
+      display: none;
+    }
+    &-mobile {
+      display: block;
+    }
+  }
+}

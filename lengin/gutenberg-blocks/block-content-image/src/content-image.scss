@@ -1,0 +1,139 @@
+.cntImg {
+  position: relative;
+  padding: 120px 0 140px;
+
+  .topContent {
+    align-items: flex-start;
+    .title {
+      text-align: left;
+    }
+  }
+
+  .wrap {
+    display: flex;
+    align-items: flex-end;
+    margin-top: 24px;
+    position: relative;
+  }
+
+  &__content {
+    position: relative;
+    width: 100%;
+    max-width: 56%;
+    p {
+      color: $c_text_grey;
+      display: block;
+      margin-bottom: 30px;
+      font-weight: 500;
+      font-size: $s_20;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 44%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: -20px;
+    img {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: auto;
+      height: auto;
+      max-height: 420px;
+      right: 0;
+      bottom: -12%;
+      display: flex;
+      max-width: 96%;
+    }
+  }
+
+  &__list {
+    padding-left: 24px;
+    &_item {
+      position: relative;
+      margin-bottom: 2rem;
+
+      .title {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 5px;
+        font-size: 1.5rem;
+        &::after {
+          content: "";
+          position: absolute;
+          left: -24px;
+          top: 9px;
+          width: 12px;
+          height: 12px;
+          border-radius: 100%;
+          background: #ff9142;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.page-id-620 {
+  .cntImg__image img {
+    max-height: 560px;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .cntImg {
+    &__content {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .cntImg {
+    padding: 80px 0;
+
+    &__list_item {
+      .title::after {
+        top: 6px;
+      }
+    }
+
+    .wrap {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__content {
+      max-width: 100%;
+    }
+
+    &__image {
+      order: -1;
+      margin-bottom: 30px;
+      max-width: 100%;
+      display: flex;
+      justify-content: center;
+
+      img {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        left: auto;
+        transform: translateX(0);
+        bottom: 0;
+      }
+    }
+  }
+}

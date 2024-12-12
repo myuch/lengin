@@ -1,0 +1,47 @@
+@font-face {
+  font-family: 'MacPawFixelDisplay';
+  src: url('../fonts/MacPawFixelDisplay-Light.otf') format("otf"),
+  url('../fonts/MacPawFixelDisplay-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'MacPawFixelDisplay';
+    src: url('../fonts/MacPawFixelDisplay-Regular.otf') format("otf"),
+    url('../fonts/MacPawFixelDisplay-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: 'MacPawFixelDisplay';
+    src: url('../fonts/MacPawFixelDisplay-Medium.otf') format("otf"),
+    url('../fonts/MacPawFixelDisplay-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 90%;
+  }
+
+  @font-face {
+    font-family: 'MacPawFixelDisplay';
+    src: url('../fonts/MacPawFixelDisplay-SemiBold.otf') format("otf"),
+    url('../fonts/MacPawFixelDisplay-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 90%;
+  }
+
+  @font-face {
+    font-family: 'MacPawFixelDisplay';
+    src: url('../fonts/MacPawFixelDisplay-Bold.otf') format("otf"),
+    url('../fonts/MacPawFixelDisplay-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+    ascent-override: 90%;
+  }

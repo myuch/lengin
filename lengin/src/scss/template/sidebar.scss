@@ -1,0 +1,36 @@
+.sidebar {
+  position: relative;
+  min-width: 15rem;
+  max-width: 15rem;
+
+  .stickyElements {
+    position: sticky;
+    top: 6.25rem;
+  }
+
+  &.left {
+    margin-right: 2rem;
+  }
+
+  &.right {
+    margin-left: 2rem;
+  }
+
+  &__info {
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #c7c9d6;
+
+    .title {
+      font-size: 20px;
+      font-weight: 700;
+      display: block;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-weight: 500;
+      color: #747683;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.sStoriesAll {
+  overflow: hidden;
+
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-right: -32px;
+  }
+
+  .sCard {
+    flex-basis: calc(100% / 3 - 32px);
+    margin-right: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1025px) {
+  .sStoriesAll {
+    .wrap {
+      margin-right: -16px;
+    }
+
+    .sCard {
+      flex-basis: calc(100% / 3 - 16px);
+      margin-right: 16px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .sStoriesAll {
+    .sCard {
+      flex-basis: calc(100% / 2 - 16px);
+      margin-right: 16px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .sStoriesAll {
+    .sCard {
+      flex-basis: calc(100%);
+    }
+  }
+}

@@ -1,0 +1,280 @@
+.mSpecial {
+
+  .topContent{
+    .shortDesc{
+      text-align: center;
+      margin-top: 12px;
+    }
+  }
+  
+  &__block {
+    width: 100%;
+    height: auto;
+    background-color: $c_bg_primary;
+    border-radius: 32px;
+    padding: 32px;
+    display: flex;
+    margin-top: 5rem;
+
+    .wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 32px;
+      align-items: stretch;
+      margin-top: 32px;
+    }
+  }
+
+  &__header {
+    width: fit-content;
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      min-width: 56px;
+      max-width: 56px;
+      height: auto;
+    }
+
+    span {
+      line-height: 1.4;
+      letter-spacing: -0.4px;
+      margin-right: 24px;
+    }
+  }
+
+  &__card {
+    flex-basis: calc(100% / 2 - 32px);
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+      flex-basis: 100%;
+    }
+
+    .description {
+      font-weight: 500;
+      font-size: $s_20;
+      margin-top: 16px;
+    }
+
+    &.bluegreen {
+      svg {
+        path {
+          fill: $c_blueGreen;
+        }
+      }
+    }
+    &.yellow {
+      svg {
+        path {
+          fill: $c_yellow;
+        }
+      }
+    }
+    &.orange {
+      svg {
+        path {
+          fill: $c_orange;
+        }
+      }
+    }
+    &.red {
+      svg {
+        path {
+          fill: $c_red;
+        }
+      }
+    }
+    &.blue {
+      svg {
+        path {
+          fill: $c_blue;
+        }
+      }
+    }
+    &.green {
+      svg {
+        path {
+          fill: $c_green;
+        }
+      }
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+
+    h3 {
+      line-height: 1.4;
+      letter-spacing: -0.4px;
+      margin-left: 16px;
+    }
+  }
+
+  &__icon {
+    position: relative;
+    display: flex;
+
+    svg {
+      min-width: 5.375rem;
+      max-width: 5.375rem;
+      height: auto;
+    }
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 3.25rem;
+      max-width: 3.25rem;
+      height: auto;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    gap: 22px;
+  }
+
+  &__link {
+    display: flex;
+    max-width: 280px;
+
+    .title {
+      font-weight: 500;
+      font-size: $s_20;
+      line-height: 1.4;
+    }
+
+    span {
+      display: block;
+      margin-top: 9px;
+      min-width: 8px;
+      max-width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 12px;
+
+      &.bluegreen {
+        background: $c_blueGreen;
+      }
+      &.yellow {
+        background: $c_yellow;
+      }
+      &.orange {
+        background: $c_orange;
+      }
+      &.red {
+        background: $c_red;
+      }
+      &.blue {
+        background: $c_blue;
+      }
+      &.green {
+        background: $c_green;
+      }
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .mSpecial {
+    &__header {
+      max-width: 27rem;
+    }
+
+    &__card {
+      flex-basis: 100%;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .mSpecial {
+    padding: 56px 0;
+
+    &__block {
+      margin-top: 3rem;
+    }
+
+    &__list {
+      flex-direction: column;
+    }
+
+    &__header {
+      max-width: 24rem;
+
+      span {
+        font-size: $s_28;
+        line-height: 1.27;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .mSpecial {
+    &__block {
+      padding: 16px;
+    }
+
+    .wrapper {
+      gap: 24px;
+    }
+
+    &__top h3 {
+      font-size: $s_28;
+      line-height: 1.27;
+      margin-left: 16px;
+    }
+
+    &__header {
+      svg {
+        min-width: 40px;
+        max-width: 40px;
+      }
+    }
+
+    &__list {
+      gap: 7px;
+
+      .title {
+        font-size: 16px;
+      }
+    }
+
+    &__card {
+      .description {
+        margin-top: 8px;
+        font-size: 16px;
+      }
+    }
+
+    &__icon {
+      svg {
+        min-width: 4.625rem;
+        max-width: 4.625rem;
+        height: auto;
+      }
+      img {
+        min-width: 2.875rem;
+        max-width: 2.875rem;
+      }
+    }
+
+    &__link {
+      span {
+        margin-top: 7px;
+      }
+    }
+  }
+}

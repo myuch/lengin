@@ -1,0 +1,160 @@
+/* ================== Text =================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: inline;
+  line-height: 1.1;
+  font-weight: 500;
+}
+
+.fz_h1,
+.fz_h2,
+.fz_h3,
+.fz_h4,
+.fz_h5,
+.fz_h6 {
+  font-weight: 500;
+}
+
+h1,
+.fz_h1 {
+  font-size: 3.5rem;
+}
+
+h2,
+.fz_h2 {
+  font-size: 3.125rem;
+}
+
+h3,
+.fz_h3 {
+  font-size: 2.625rem;
+}
+
+h4,
+.fz_h4 {
+  font-size: 2.125rem;
+}
+
+h5,
+.fz_h5 {
+  font-size: 1.75rem;
+}
+
+h6,
+.fz_h6 {
+  font-size: 1.375rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+
+  strong {
+    font-weight: 700;
+  }
+}
+
+.topContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .subtitle {
+    margin-bottom: 8px;
+  }
+
+  .title {
+    line-height: 1.1;
+  }
+
+  .shortDesc {
+    margin-top: 12px;
+  }
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #20c198;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.shortDesc {
+  font-weight: 500;
+  max-width: 52rem;
+  line-height: 1.9;
+  font-size: $s_18;
+  color: #747683;
+}
+
+.lh19 {
+  line-height: 1.9;
+
+  p {
+    line-height: inherit;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1025px) {
+  h1,
+  .fz_h1 {
+    font-size: 40px;
+  }
+
+  h2,
+  .fz_h2 {
+    font-size: 36px;
+  }
+
+  h3,
+  .fz_h3 {
+    font-size: 32px;
+  }
+
+  h4,
+  .fz_h4 {
+    font-size: 28px;
+  }
+
+  h5,
+  .fz_h5 {
+    font-size: 22px;
+  }
+
+  h6,
+  .fz_h6 {
+    font-size: 18px;
+  }
+  .lh19 {
+    line-height: 1.5;
+  }
+  .shortDesc {
+    line-height: 1.5;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 767px) {
+  .topContent {
+    .title {
+      br {
+        display: none;
+      }
+    }
+    .shortDesc {
+      font-size: 16px;
+      br {
+        display: none;
+      }
+    }
+  }
+}

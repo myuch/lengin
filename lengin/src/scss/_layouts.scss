@@ -1,0 +1,86 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  color: $c_text_primary;
+  background: #fff;
+  font-family: "MacPawFixelDisplay", sans-serif;
+  min-width: 375px;
+  font-size: 1rem;
+  line-height: 1.3125;
+  font-weight: 500;
+  height: auto;
+  overflow-y: auto;
+
+  &.body-hidden {
+    overflow: hidden;
+    min-height: initial !important;
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    position: relative;
+  }
+}
+
+/* ================== General =================== */
+main {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: auto;
+  // overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 78.75rem;
+  margin: 0 auto;
+  height: auto;
+  position: relative;
+  padding: 0 20px;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  padding: 80px 0;
+}
+
+a {
+  color: $c_text_primary;
+}
+
+
+
+/* ================== MEDIA =================== */
+// @media (min-width: 1921px) {
+//   html {
+//     font-size: 21px;
+//   }
+// }
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 964px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 718px;
+  }
+}
+
+@media (max-width: 767px) {
+  .container {
+    max-width: 579px;
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 64px 0;
+  }
+}

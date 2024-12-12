@@ -1,0 +1,67 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+
+  .page-numbers {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    max-width: 2.5rem;
+    height: 2.5rem;
+    transition: 0.2s;
+    font-weight: 500;
+    color: #747683;
+    line-height: 1;
+    margin-right: 2px;
+    border-radius: 8px;
+
+    @media (any-hover: hover) {
+      &:hover {
+        background: $c_orange_light;
+      }
+    }
+
+    &.current {
+      color: $c_orange;
+      background: $c_orange_light;
+    }
+
+    &.prev {
+    }
+
+    &.prev,
+    &.next {
+      &:hover {
+        opacity: 0.5;
+        background: transparent;
+      }
+    }
+
+    &.dots {
+      background-color: transparent !important;
+      color: #363839 !important;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 767px) {
+  .pagination {
+    position: relative;
+    margin-top: 20px;
+    .page-numbers {
+      min-width: 34px;
+      max-width: 34px;
+      height: 34px;
+      font-size: 16px;
+
+      // &.prev,
+      // &.next {
+      //   display: none;
+      // }
+    }
+  }
+}

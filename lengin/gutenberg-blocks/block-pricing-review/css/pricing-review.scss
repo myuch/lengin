@@ -1,0 +1,137 @@
+.pricingReview {
+  position: relative;
+
+  .wrap {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .block {
+    background: #28241f;
+    position: relative;
+    border-radius: 16px;
+    padding: 32px;
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &-logo {
+    display: block;
+    margin-left: 24px;
+    width: auto;
+    height: auto;
+    max-height: 40px;
+  }
+
+  &__desc {
+    margin-bottom: 24px;
+    p {
+      color: #fff;
+      font-size: 20px;
+      line-height: 1.5;
+      font-weight: 400;
+    }
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+  }
+
+  &-name {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 8px;
+    line-height: 1;
+  }
+
+  &-position {
+    font-size: 16px;
+    color: #b0b3c1;
+    font-weight: 500;
+  }
+
+  &__clutch {
+    display: flex;
+    align-items: center;
+
+    span {
+      color: #fff;
+      font-size: 12px;
+      display: flex;
+      align-items: center;
+    }
+
+    p {
+      text-decoration: underline;
+      font-size: 12px !important;
+      margin-left: 5px;
+    }
+  }
+
+  &-stars {
+    position: absolute;
+    bottom: 15px;
+    right: -25px;
+  }
+
+  &-illustration-2 {
+    position: absolute;
+    right: -114px;
+    top: -71px;
+  }
+
+  &-illustration-3 {
+    position: absolute;
+    bottom: -66px;
+    left: -121px;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .pricingReview {
+    .block {
+      padding: 24px;
+    }
+
+    &__top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__logo {
+      margin-bottom: 8px;
+    }
+
+    &-stars {
+      display: none;
+    }
+
+    &-illustration-2,
+    &-illustration-3 {
+      display: none;
+    }
+
+    &__desc {
+      p {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+    }
+  }
+}

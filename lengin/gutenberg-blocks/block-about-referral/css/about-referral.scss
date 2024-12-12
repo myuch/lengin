@@ -1,0 +1,165 @@
+.aboutReferral {
+  position: relative;
+
+  &-illustration-1 {
+    position: absolute;
+    right: -114px;
+    top: -71px;
+  }
+
+  &-illustration-2 {
+    position: absolute;
+    bottom: -66px;
+    left: -121px;
+  }
+
+  .wrap {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto 220px;
+    position: relative;
+  }
+
+  .block {
+    background-color: $c_bg_third;
+    padding: 32px;
+  }
+
+  &__tech {
+    display: flex;
+    justify-content: flex-end;
+
+    .item {
+      display: flex;
+      align-items: center;
+      margin-right: 16px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      p {
+        color: #d9cfc3;
+        margin-left: 4px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__desc {
+    margin-bottom: 16px;
+    p {
+      color: #fff;
+      font-size: 20px;
+      margin-bottom: 20px;
+      line-height: 1.7;
+      font-weight: 500;
+
+      strong {
+        font-weight: 700;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__numbers {
+    display: flex;
+    margin-right: -32px;
+
+    .item {
+      flex-basis: calc(100% / 3 - 32px);
+      margin-right: 32px;
+      background-color: $c_bg_secondary;
+      padding: 48px 24px 48px 32px;
+
+      &__row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 24px;
+      }
+
+      &-number {
+        font-size: 48px;
+        margin-right: 24px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .aboutReferral {
+    &__desc {
+      p {
+        font-size: 16px;
+      }
+    }
+
+    &__numbers {
+      .item {
+        padding: 32px 16px;
+
+        &__row {
+          margin-bottom: 16px;
+          img {
+            width: 64px;
+          }
+        }
+
+        &-number {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .aboutReferral {
+    .wrap {
+      margin-bottom: 112px;
+    }
+
+    &__numbers {
+      flex-wrap: wrap;
+      .item {
+        flex-basis: calc(100%);
+        margin-bottom: 16px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-illustration-1,
+    &-illustration-2 {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .aboutReferral {
+    .block {
+      padding: 24px 16px;
+    }
+
+    &__tech {
+      .item {
+
+        img{
+          width: 20px;
+          height: auto;
+        }
+        p {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+.focusing {
+  position: relative;
+
+  .wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.focusImg {
+  position: relative;
+
+  img {
+    display: block;
+    width: 100%;
+    max-width: 22rem;
+    height: auto;
+  }
+}
+
+.focusList {
+  width: 100%;
+  max-width: 38.125rem;
+  margin-left: 11.375rem;
+  position: relative;
+
+  &-lines {
+    position: absolute;
+    width: 12rem;
+    height: auto;
+    left: -12rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &-lines-mobile {
+    display: none;
+    position: absolute;
+    left: 29px;
+    top: -163px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.375rem;
+    padding: 3px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 29px;
+      top: 60px;
+      width: 1px;
+      height: 100%;
+      border-left: 2px dashed #1f212f;
+      display: none;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  &__number {
+    margin-right: 24px;
+    position: relative;
+    display: flex;
+    z-index: 2;
+
+    svg {
+      width: 5.625rem;
+      height: auto;
+      path {
+        fill: #03040d;
+      }
+    }
+
+    span {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: #b0b3c1;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__content {
+    .title {
+      color: #fff;
+      margin-bottom: 5px;
+    }
+    p {
+      color: #b0b3c1;
+      font-weight: 500;
+      letter-spacing: -0.3px;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .focusing {
+    position: relative;
+
+    .wrap {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .focusList {
+    margin-left: 0;
+    max-width: 100%;
+
+    &-lines-mobile {
+      display: block;
+    }
+
+    &__item {
+      align-items: flex-start;
+
+      &::after {
+        display: block;
+      }
+    }
+
+    &-lines {
+      display: none;
+    }
+
+    &__number {
+      margin-right: 16px;
+
+      svg {
+        width: 60px;
+        height: auto;
+      }
+
+      span {
+        font-size: 20px;
+      }
+    }
+
+    &__content {
+      padding-top: 18px;
+      .title {
+        font-size: 20px;
+      }
+    }
+  }
+
+  .focusImg {
+    margin-left: 105px;
+    margin-bottom: 30px;
+    z-index: 2;
+    img {
+      max-width: 230px;
+    }
+  }
+}

@@ -1,0 +1,225 @@
+button {
+  font-family: "MacPawFixelDisplay", sans-serif;
+}
+
+.btnPrimary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: auto;
+  border-radius: 40px;
+  background-color: $c_orange;
+  transition: 0.1s linear;
+  padding: 0 2.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  width: fit-content;
+  line-height: 48px;
+  cursor: pointer;
+  color: $c_text_primary;
+  white-space: nowrap;
+
+  @media (any-hover: hover) {
+    &:hover {
+      box-shadow: 0px 0px 0px 8px rgba(255, 145, 66, 0.25);
+    }
+  }
+}
+
+.btnDark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0 32px;
+  position: relative;
+  height: 3rem;
+  font-size: $s_18;
+  background: $c_bg_primary;
+  color: #fff;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1;
+  transition: 0.3s;
+  white-space: nowrap;
+
+  svg {
+    margin-left: 8px;
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $c_orange;
+    }
+  }
+}
+
+.btnDarkArrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0 32px;
+  position: relative;
+  height: 3rem;
+  font-size: $s_18;
+  background: $c_bg_primary;
+  color: #fff;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1;
+  transition: 1.3s;
+  white-space: nowrap;
+  transition: 0.3s linear;
+
+  img {
+    margin-left: 8px;
+    display: block;
+  }
+}
+
+.btnText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  height: 3rem;
+  border-radius: 40px;
+  padding: 0 32px;
+  font-size: $s_18;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s linear;
+  text-align: left;
+  color: #060A21;
+
+  svg {
+    display: block;
+    margin-left: 8px;
+
+    path {
+      transition: 0.3s linear;
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      color: $c_orange !important;
+
+      svg {
+        path {
+          stroke: $c_orange !important;
+        }
+      }
+    }
+  }
+
+  &:focus {
+    background: rgba(255, 145, 66, 0.3);
+    color: #060a21;
+    svg {
+      path {
+        stroke: #060a21;
+      }
+    }
+  }
+
+  &.btnTextWhite {
+    color: #fff;
+
+    svg {
+      path {
+        stroke: #fff;
+      }
+    }
+  }
+}
+
+.btnSecondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 0 8px 0 24px;
+  position: relative;
+  height: 3rem;
+  font-size: $s_18;
+  background: transparent;
+  color: #fff;
+  border-radius: 40px;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 1;
+  transition: 1.3s;
+  white-space: nowrap;
+  transition: 0.3s linear;
+  border: 2px solid #fff;
+
+  &.dark {
+    border: 2px solid $c_orange;
+    color: $c_text_primary;
+
+    svg {
+      rect {
+        fill: $c_text_primary;
+      }
+      path {
+        stroke: #fff;
+      }
+    }
+  }
+
+  @media (any-hover: hover) {
+    &:hover {
+      border: 2px solid $c_orange !important;
+    }
+  }
+
+  span {
+    line-height: 1;
+  }
+
+  svg {
+    margin-left: 16px;
+    display: block;
+    transition: 0.3s linear;
+    rect {
+      transition: 0.3s linear;
+    }
+    path {
+      transition: 0.3s linear;
+    }
+  }
+}
+
+.twoButtons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto 0;
+
+  .btn {
+    margin: 0 8px;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 767px) {
+  .twoButtons {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 335px;
+
+    .btn {
+      width: 100%;
+
+      &:nth-child(1) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.postBanner {
+  position: relative;
+
+  &-subtitle {
+    font-size: 22px;
+    color: $c_text_secondary;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 16px;
+  }
+
+  h1.title {
+    display: block;
+    margin-bottom: 3rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin-bottom: 3rem;
+
+    img {
+      position: relative;
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 767px) {
+  .postBanner {
+    &__image {
+      width: calc(100% + 20px);
+      left: -10px;
+      position: relative;
+      background-color: #eaf2ff;
+    }
+  }
+}

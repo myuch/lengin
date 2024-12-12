@@ -1,0 +1,81 @@
+.sBannerNumbers {
+  display: flex;
+  margin-right: -16px;
+  margin-top: 4rem;
+  justify-content: space-between;
+  &__item {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-right: 16px;
+
+    &-title {
+      font-size: 2.5rem;
+      font-weight: 500;
+      line-height: 1.2;
+    }
+    &-subtitle {
+      color: #747683;
+      font-size: $s_20;
+      font-weight: 500;
+    }
+
+    &:nth-child(1) {
+      .sBannerNumbers__item-title {
+        color: $c_orange;
+      }
+    }
+    &:nth-child(2) {
+      .sBannerNumbers__item-title {
+        color: $c_green;
+      }
+    }
+    &:nth-child(3) {
+      .sBannerNumbers__item-title {
+        color: $c_yellow;
+      }
+    }
+    &:nth-child(4) {
+      .sBannerNumbers__item-title {
+        color: $c_blue;
+      }
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .sBannerNumbers {
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sBannerNumbers {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      flex-basis: calc(100% / 2 - 16px);
+      margin-right: 16px !important;
+      margin-bottom: 16px;
+
+      &-title {
+        font-size: 36px;
+      }
+
+      &-subtitle {
+        font-size: 16px;
+        br {
+          display: none;
+        }
+      }
+    }
+
+  }
+  
+}

@@ -1,0 +1,37 @@
+.titleImageDesc {
+  img {
+    display: block;
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .wrap {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .shortDesc {
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .topContent {
+    margin-bottom: 60px;
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 767px) {
+  .titleImageDesc {
+    .topContent {
+      margin-bottom: 32px;
+    }
+
+    img {
+      width: calc(100% + 60px);
+      left: -25px;
+      position: relative;
+    }
+  }
+}

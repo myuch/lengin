@@ -1,0 +1,82 @@
+/* ================== Normalize =================== */
+@import "./variables";
+@import "./base";
+@import "./mixins";
+
+/* ================== Layout =================== */
+@import "./layouts";
+@import "./layouts/classes";
+@import "./layouts/text";
+@import "./layouts/form";
+@import "./layouts/buttons";
+@import "./layouts/icon-block";
+@import "./layouts/socials";
+@import "./layouts/colors";
+
+/* ================== Template =================== */
+@import "./template/footer";
+@import "./template/header";
+@import "./template/breadcrumbs";
+@import "./template/blog-card";
+@import "./template/share-buttons";
+@import "./template/tCard";
+@import "./template/sCard";
+@import "./template/swiper";
+@import "./template/modal-form";
+@import "./template/start-modal";
+@import "./template/banner-numbers";
+@import "./template/pages";
+@import "./template/pagination";
+@import "./template/card-tags";
+@import "./template/sidebar";
+@import "./template/single-post";
+@import "./template/select";
+@import "./template/subscribe-block";
+@import "./template/author-page";
+@import "./template/article-styles";
+@import "./template/table-contents";
+
+
+/* ================== Gutenberg Blocks =================== */
+@import "../../gutenberg-blocks/block-home-banner/src/home-banner";
+@import "../../gutenberg-blocks/block-why-choosing/src/why-choosing";
+@import "../../gutenberg-blocks/block-numbers/src/numbers";
+@import "../../gutenberg-blocks/block-faq/src/faq";
+@import "../../gutenberg-blocks/block-testimonials-home/src/testimonials-home";
+@import "../../gutenberg-blocks/block-featured-projects/src/featured-projects";
+@import "../../gutenberg-blocks/block-success-stories/src/success-stories";
+@import "../../gutenberg-blocks/block-js-libraries/src/js-libraries";
+@import "../../gutenberg-blocks/block-js-choose/src/js-choose";
+@import "../../gutenberg-blocks/block-awards/src/awards";
+@import "../../gutenberg-blocks/block-core-services/src/core-services";
+@import "../../gutenberg-blocks/block-contact/src/contact";
+@import "../../gutenberg-blocks/block-clutch/src/clutch";
+@import "../../gutenberg-blocks/block-benefits/src/benefits";
+@import "../../gutenberg-blocks/block-partner/src/partner";
+@import "../../gutenberg-blocks/block-specific-advantages/src/specific-advantages";
+@import "../../gutenberg-blocks/block-achieving-success/src/achieving-success";
+@import "../../gutenberg-blocks/block-recent-projects/src/recent-projects";
+@import "../../gutenberg-blocks/block-content-image/src/content-image";
+@import "../../gutenberg-blocks/block-agile-development/src/agile-development";
+@import "../../gutenberg-blocks/block-services-banner/src/services-banner";
+@import "../../gutenberg-blocks/block-financial-considerations/src/financial-considerations";
+@import "../../gutenberg-blocks/block-call-action/src/call-action";
+@import "../../gutenberg-blocks/block-development/src/development";
+@import "../../gutenberg-blocks/block-clients-revenue/src/clients-revenue";
+@import "../../gutenberg-blocks/block-focusing/src/focusing";
+@import "../../gutenberg-blocks/block-about-banner/src/about-banner";
+@import "../../gutenberg-blocks/block-our-clients/src/our-clients";
+@import "../../gutenberg-blocks/block-portfolio/src/portfolio";
+@import "../../gutenberg-blocks/block-blog/src/blog";
+@import "../../gutenberg-blocks/block-team/src/team";
+@import "../../gutenberg-blocks/block-special/src/special";
+@import "../../gutenberg-blocks/block-small-banner/src/small-banner";
+@import "../../gutenberg-blocks/block-last-projects/src/last-projects";
+@import "../../gutenberg-blocks/block-post-banner/src/post-banner";
+@import "../../gutenberg-blocks/block-post-content/src/post-content";
+@import "../../gutenberg-blocks/block-used-technologies/src/used-technologies";
+@import "../../gutenberg-blocks/block-client-testimonial/src/client-testimonial";
+@import "../../gutenberg-blocks/block-review-banner/src/review-banner";
+@import "../../gutenberg-blocks/block-all-rewards/src/all-rewards";
+@import "../../gutenberg-blocks/block-success-stories-all/src/success-stories.scss";
+@import "../../gutenberg-blocks/block-testimonials-all/src/testimonials-all.scss";

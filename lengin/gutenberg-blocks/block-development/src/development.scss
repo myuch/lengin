@@ -1,0 +1,153 @@
+.frdevelopment {
+  .wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    margin-right: -32px;
+  }
+
+  &__item {
+    flex-basis: calc(100% / 2 - 32px);
+    margin-right: 32px;
+    border: 1px solid $c_bg_third;
+    background-color: $c_bg_third;
+    border-radius: 16px;
+    padding: 16px 24px;
+    margin-bottom: 48px;
+
+    &:nth-child(1),
+    &:nth-child(2) {
+      .iconBlock {
+        background: #12141e;
+        img {
+          width: 3.5rem;
+        }
+      }
+    }
+
+    &_top {
+      display: flex;
+      align-items: center;
+      margin-bottom: 24px;
+
+      .title {
+        font-size: $s_28;
+        line-height: 1.27;
+        color: #ffffff;
+        margin-left: 32px;
+      }
+    }
+
+    .description {
+      font-weight: 500;
+      letter-spacing: -0.3px;
+      line-height: 1.9;
+      color: $c_text_light;
+    }
+  }
+  &__list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    margin-right: -10px;
+    margin-bottom: -24px;
+  }
+
+  &__link {
+    flex-basis: calc(100% / 3 - 10px);
+    display: flex;
+    margin-right: 10px;
+    margin-bottom: 24px;
+    padding-right: 5px;
+
+    span {
+      display: block;
+      margin-top: 7px;
+      min-width: 12px;
+      max-width: 12px;
+      height: 12px;
+      border-radius: 50%;
+
+      &.bluegreen {
+        background: $c_blueGreen;
+      }
+      &.yellow {
+        background: $c_yellow;
+      }
+      &.orange {
+        background: $c_orange;
+      }
+      &.red {
+        background: $c_red;
+      }
+      &.blue {
+        background: $c_blue;
+      }
+      &.green {
+        background: $c_green;
+      }
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: $s_22;
+      line-height: 1.25;
+      margin-left: 16px;
+      color: #ffffff;
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .frdevelopment {
+    &__link {
+      flex-basis: calc(100% / 2 - 10px);
+
+      .title {
+        font-size: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .frdevelopment {
+    &__item {
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    &__list {
+      margin-bottom: -10px;
+    }
+
+    &__link {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .frdevelopment {
+    padding: 80px 0 56px;
+
+    .wrap {
+      row-gap: 16px;
+    }
+
+    &__item {
+      flex-basis: 100%;
+
+      .description {
+        line-height: 1.5;
+        letter-spacing: 0;
+      }
+    }
+  }
+
+  .frdevelopment__link span {
+    margin-top: 4px;
+  }
+}

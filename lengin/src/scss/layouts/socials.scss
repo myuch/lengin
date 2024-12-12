@@ -1,0 +1,164 @@
+.socials {
+  &__item {
+    min-width: 2.5rem;
+    max-width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    background-color: #000;
+    transition: 0.3s all;
+
+    img {
+      width: 1.7rem;
+      height: auto;
+    }
+
+    &.siOrange {
+      background-color: rgba(255, 145, 66, 0.3);
+    }
+
+    &.siBlue {
+      background-color: rgba(17, 138, 178, 0.3);
+    }
+
+    &.siGreen {
+      background-color: rgba(32, 193, 152, 0.3);
+    }
+
+    &.siYellow {
+      background-color: rgba(232, 183, 70, 0.3);
+    }
+
+    &.siRed {
+      background-color: rgba(232, 70, 35, 0.3);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &.largeIcon {
+    .socials__item {
+      min-width: 3.5rem;
+      max-width: 3.5rem;
+      height: 3.5rem;
+
+      img {
+        width: 2rem;
+        height: auto;
+      }
+    }
+  }
+}
+
+.cWithText {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    width: fit-content;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-icon {
+      min-width: 2.5rem;
+      max-width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background-color: #118ab24d;
+      margin-right: 16px;
+
+      img {
+        width: 1.7rem;
+        height: auto;
+      }
+    }
+
+    &-title {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+  a {
+    transition: 0.3s all;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+
+.sWithText {
+  &__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    position: relative;
+    width: fit-content;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &-icon {
+      min-width: 2.5rem;
+      max-width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+      background-color: #000;
+      margin-right: 16px;
+
+      img {
+        width: 1.7rem;
+        height: auto;
+      }
+      &.siOrange {
+        background-color: rgba(255, 145, 66, 0.3);
+      }
+
+      &.siBlue {
+        background-color: rgba(17, 138, 178, 0.3);
+      }
+
+      &.siGreen {
+        background-color: rgba(32, 193, 152, 0.3);
+      }
+
+      &.siYellow {
+        background-color: rgba(232, 183, 70, 0.3);
+      }
+
+      &.siRed {
+        background-color: rgba(232, 70, 35, 0.3);
+      }
+    }
+
+    &-title {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+
+  a {
+    transition: 0.3s all;
+    @media (any-hover: hover) {
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
+}

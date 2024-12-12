@@ -1,0 +1,308 @@
+.awards {
+  position: relative;
+  padding: 32px 0;
+
+  .awardsWrap {
+    background: $c_bg_primary;
+    display: flex;
+    border-radius: 32px;
+    position: relative;
+  }
+
+  .awardsBlock {
+    position: absolute;
+    z-index: 2;
+    left: 32px;
+    top: 32px;
+    width: 28rem;
+    height: 160px;
+    padding: 32px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+
+    svg {
+      position: absolute;
+      right: 22px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.awardsMap {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  overflow: hidden;
+
+  &-map {
+    width: 100%;
+    height: auto;
+
+    &.tablet,
+    &.mobile {
+      display: none;
+    }
+  }
+
+  &-item {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+
+    &.hasLink {
+      cursor: pointer;
+      @media (any-hover: hover) {
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    img {
+      display: block;
+      width: 80%;
+      height: auto;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    svg {
+      height: auto;
+    }
+
+    &#awardsMap-one {
+      left: 6%;
+      bottom: 13%;
+
+      svg {
+        width: 10.5rem;
+      }
+    }
+
+    &#awardsMap-two {
+      left: 42.1%;
+      bottom: 37%;
+
+      svg {
+        width: 7.8rem;
+      }
+    }
+
+    &#awardsMap-three {
+      left: 51%;
+      bottom: 8.5%;
+
+      svg {
+        width: 10rem;
+      }
+    }
+
+    &#awardsMap-four {
+      right: 22%;
+      top: 7%;
+      svg {
+        width: 13.125rem;
+      }
+    }
+
+    &#awardsMap-five {
+      right: 8.7%;
+      bottom: 12%;
+      svg {
+        width: 12.555rem;
+      }
+    }
+
+    &.blue {
+      svg {
+        path {
+          fill: $c_blue;
+        }
+      }
+    }
+    &.red {
+      svg {
+        path {
+          fill: $c_red;
+        }
+      }
+    }
+    &.green {
+      svg {
+        path {
+          fill: $c_green;
+        }
+      }
+    }
+    &.orange {
+      svg {
+        path {
+          fill: $c_orange;
+        }
+      }
+    }
+    &.yellow {
+      svg {
+        path {
+          fill: $c_yellow;
+        }
+      }
+    }
+    &.bluegreen {
+      svg {
+        path {
+          fill: $c_blueGreen;
+        }
+      }
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .awards {
+    .awardsBlock {
+      padding: 24px;
+      height: 120px;
+      width: 300px;
+      left: 16px;
+      top: 16px;
+      .title {
+        font-size: 28px;
+        max-width: 200px;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .awardsMap {
+    max-width: 670px;
+    margin: 0 auto;
+    &-map {
+      &.tablet {
+        display: block;
+      }
+
+      &.desktop,
+      &.mobile {
+        display: none;
+      }
+    }
+  }
+
+  .awardsMap-item {
+    &#awardsMap-one {
+      left: 7%;
+      bottom: 2.4%;
+      svg {
+        width: 10.5rem;
+      }
+    }
+    &#awardsMap-two {
+      left: 58%;
+      bottom: 2.6%;
+      svg {
+        width: 9.8rem;
+      }
+    }
+    &#awardsMap-three {
+      left: 17.7%;
+      bottom: 52%;
+      svg {
+        width: 8.5rem;
+      }
+    }
+    &#awardsMap-four {
+      right: 38.6%;
+      top: 40%;
+
+      svg {
+        width: 11.125rem;
+      }
+    }
+    &#awardsMap-five {
+      right: 14.7%;
+      bottom: 61.2%;
+
+      svg {
+        width: 11.555rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .awards {
+    .awardsBlock {
+      height: 100px;
+
+      svg {
+        width: 24px;
+      }
+    }
+  }
+  .awardsMap {
+    max-width: 335px;
+    margin: 0 auto;
+    &-map {
+      &.mobile {
+        display: block;
+      }
+
+      &.desktop,
+      &.tablet {
+        display: none;
+      }
+    }
+  }
+
+  .awardsMap-item {
+    &#awardsMap-one {
+      left: 5%;
+      bottom: 9.4%;
+      svg {
+        width: 7.7rem;
+      }
+    }
+    &#awardsMap-two {
+      left: 62%;
+      bottom: 3.2%;
+      svg {
+        width: 7rem;
+      }
+    }
+    &#awardsMap-three {
+      left: 7.3%;
+      bottom: 51.4%;
+      svg {
+        width: 7.4rem;
+      }
+    }
+    &#awardsMap-four {
+      right: 36.6%;
+      top: 46%;
+
+      svg {
+        width: 8.125rem;
+      }
+    }
+    &#awardsMap-five {
+      right: 7.7%;
+      bottom: 50.2%;
+
+      svg {
+        width: 9rem;
+      }
+    }
+  }
+}

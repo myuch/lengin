@@ -1,0 +1,100 @@
+.cRevenue {
+  .wrap {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: -30px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(100% / 4 - 30px);
+    margin-right: 30px;
+
+    img {
+      max-width: 250px;
+      height: auto;
+      max-height: 248px;
+      margin-bottom: 24px;
+    }
+
+    .percent {
+      font-weight: 500;
+      font-size: $s_56;
+      line-height: 1.28;
+    }
+
+    .description {
+      color: $c_text_light;
+      font-weight: 500;
+      font-size: $s_20;
+    }
+
+    &.green {
+      .percent,
+      .description span {
+        color: $c_green;
+      }
+    }
+
+    &.blue {
+      .percent,
+      .description span {
+        color: $c_blue;
+      }
+    }
+
+    &.orange {
+      .percent,
+      .description span {
+        color: $c_orange;
+      }
+    }
+
+    &.yellow {
+      .percent,
+      .description span {
+        color: $c_yellow;
+      }
+    }
+  }
+}
+
+/* ================== MEDIA =================== */
+@media (max-width: 1199px) {
+  .cRevenue {
+    &__item {
+      flex-basis: calc(100% / 2 - 32px);
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .cRevenue {
+    &__item {
+      flex-basis: 100%;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: 10px;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      img {
+        margin-bottom: 0;
+        margin-right: 16px;
+        width: 130px;
+      }
+
+      .percent {
+        font-size: 40px;
+      }
+      .description {
+        font-size: 16px;
+      }
+    }
+  }
+}

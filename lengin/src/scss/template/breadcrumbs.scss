@@ -1,0 +1,38 @@
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  margin-bottom: 45px;
+
+  a {
+    color: #747683;
+    font-size: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  span {
+    font-size: 1rem;
+  }
+
+  .bread-separator {
+    display: block;
+    margin: 0 8px;
+    color: #747683;
+  }
+
+  .current-item {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 410px;
+  }
+
+  svg {
+    display: block;
+    margin: 0 8px;
+  }
+}
